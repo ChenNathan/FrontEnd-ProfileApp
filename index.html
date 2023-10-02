@@ -42,26 +42,26 @@
 </div>
 
     
-    <script type="module">
+<script type="module">
 
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCXh_eeLNiIKRjcrsiZHsoL_SVyj0RxPto",
-    authDomain: "profileapp-5c2e4.firebaseapp.com",
-    databaseURL: "https://profileapp-5c2e4-default-rtdb.firebaseio.com",
-    projectId: "profileapp-5c2e4",
-    storageBucket: "profileapp-5c2e4.appspot.com",
-    messagingSenderId: "467769292395",
-    appId: "1:467769292395:web:f052d98650fc4ae9d9232e"
-  };
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCXh_eeLNiIKRjcrsiZHsoL_SVyj0RxPto",
+  authDomain: "profileapp-5c2e4.firebaseapp.com",
+  databaseURL: "https://profileapp-5c2e4-default-rtdb.firebaseio.com",
+  projectId: "profileapp-5c2e4",
+  storageBucket: "profileapp-5c2e4.appspot.com",
+  messagingSenderId: "467769292395",
+  appId: "1:467769292395:web:f052d98650fc4ae9d9232e"
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
         
   get {getDataBase, set, get, update, remove, ref, child}
   from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"
