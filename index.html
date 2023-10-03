@@ -64,15 +64,14 @@
 
                 function FindData() {
                     const dbref = ref(db);
-    
+                
                     get(child(dbref, userInputID.value))
                         .then((snapshot) => {
                             if (snapshot.exists()) {
                                 userName.innerHTML = "Name: " + snapshot.val().name;
-                                userBio.innerHTML = "Location: " + snapshot.val().bio;
+                                userDescription.innerHTML = "Bio: " + snapshot.val().bio;
                                 userAge.innerHTML = "Age: " + snapshot.val().age;
-                                userPronouns.innerHTML =
-                                    "Pronouns: " + snapshot.val().pronouns;
+                                userLocation.innerHTML = "Location: " + snapshot.val().location;
                                 userImage.src = snapshot.val().image;
                             } else {
                                 alert("No data found");
