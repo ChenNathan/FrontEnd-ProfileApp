@@ -69,7 +69,7 @@
                         .then((snapshot) => {
                             if (snapshot.exists()) {
                                 userName.innerHTML = "Name: " + snapshot.val().name;
-                                userBio.innerHTML = "Bio: " + snapshot.val().bio;
+                                userBio.innerHTML = "Location: " + snapshot.val().bio;
                                 userAge.innerHTML = "Age: " + snapshot.val().age;
                                 userPronouns.innerHTML =
                                     "Pronouns: " + snapshot.val().pronouns;
