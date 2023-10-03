@@ -28,12 +28,7 @@
   <h3 id="findAge" type="number"></h3> <br><br>
 </div>
 
-<button class="search_button">Search</button>
-var userSearchButton = document.querySelector(".search_button");
-userSearchButton.onclick = FindData;   
-    
 <script type="module">
-
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "firebase/app";
     // TODO: Add SDKs for Firebase products that you want to use
@@ -56,10 +51,37 @@ userSearchButton.onclick = FindData;
     import {getDataBase, set, get, update, remove, ref, child}
     from "firebase/app"
       
-    const db = getDataBase();
+        const db = getDataBase();
 
-    
-    </script>
-    
-</body>
+            var userName = document.querySelector(".name");
+            var userAge = document.querySelector(".age");
+            var userBio = document.querySelector(".bio");
+            var userPronouns = document.querySelector(".pronouns");
+            var userImage = document.querySelector(".image");
+            var userInputID = document.querySelector(".id_input");
+            var userSearchButton = document.querySelector(".search_button");
 
+            function FindData() {
+                const dbref = ref(db);
+
+                get(child(dbref, userInputID.value))
+                    .then((snapshot) => {
+                        if (snapshot.exists()) {
+                            userName.innerHTML = "Name: " + snapshot.val().name;
+                            userBio.innerHTML = "Bio: " + snapshot.val().bio;
+                            userAge.innerHTML = "Age: " + snapshot.val().age;
+                            userPronouns.innerHTML =
+                                "Pronouns: " + snapshot.val().pronouns;
+                            userImage.src = snapshot.val().image;
+                        } else {
+                            alert("No data found");
+                        }
+                    })
+                    .catch((error) => {
+                        alert(error);
+                    });
+            }
+            userSearchButton.onclick = FindData;
+        </script>
+    </body>
+</html>
