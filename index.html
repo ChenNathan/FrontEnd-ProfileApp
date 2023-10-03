@@ -69,7 +69,7 @@
                         .then((snapshot) => {
                             if (snapshot.exists()) {
                                 userName.innerHTML = "Name: " + snapshot.val().name;
-                                userDescription.innerHTML = "Bio: " + snapshot.val().bio;
+                                userDescription.innerHTML = "Description: " + snapshot.val().Description;
                                 userAge.innerHTML = "Age: " + snapshot.val().age;
                                 userLocation.innerHTML = "Location: " + snapshot.val().location;
                                 userImage.src = snapshot.val().image;
