@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nanagram</title>
         <style>
             body {text-align: center; background-color: black; color: grey;}
+    
         </style>
     </head>
 
     <body>
+        <img src="305A4 Logo Banner.png" , width="1000" />
+        <h1>Welcome to NanaGram!</h1>
         <center>
-            <img src="305A4 Logo Banner.png", width="1000">
-            <h1>
-                Welcome to NanaGram!
-            </h1>
-            <iframe src="https://thunkable.site/w/KlfWANZuq_q7BdDpJMVwl" title="Nanagram ProfileApp" height = 725 width = 450></iframe>
             <p><span class="name"></span></p>
             <p><img class="image" width="100" height="100" /></p>
             <p><span class="age"></span></p>
             <p><span class="bio"></span></p>
             <p><span class="pronouns"></span></p>
-            <h4>Hardcoded ID's</h4>
+            <h4>Hardcoded IDs</h4>
             <p>MdyYUAnDWnOvWvUWXj3MB37fM4R2</p>
             <p>woa8ND3JUSQX6fDcPT1ch2GH2Su2</p>
             <input class="id_input" type="text" placeholder="Enter ID" />
             <button class="search_button">Search</button>
+            <iframe src="https://thunkable.site/w/KlfWANZuq_q7BdDpJMVwl" title="Nanagram ProfileApp" height = 725 width = 450></iframe>
         </center>
 
 
 
-        <script type="module">
+     <script type="module">
           // Import the functions you need from the SDKs you need
           import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
           // TODO: Add SDKs for Firebase products that you want to use
@@ -48,13 +47,13 @@
             appId: "1:467769292395:web:f052d98650fc4ae9d9232e"
           };
 
-          // Initialize Firebase
-          const app = initializeApp(firebaseConfig);
-            
+            //Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
             import {getDataBase, ref, get, set, child, update, remove}
             from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
-              
-            const db = getDataBase();
+
+            const db = getDatabase();
 
             var userName = document.querySelector(".name");
             var userAge = document.querySelector(".age");
